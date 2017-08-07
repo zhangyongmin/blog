@@ -1,0 +1,142 @@
+// .navigation_a>li:nth-of-type(2) a{
+// 	color:red;
+// }
+.navigation_a>li:nth-of-type(2) a:after{
+	content:'';
+	height:3px;
+	width:100%;
+	left:calc(50% - 40px);
+	background:red;
+	display:inline-block;
+	top:48px;
+	position:absolute;
+}
+.about-a{
+	height:345px;
+}
+.about-a h2{
+	font-size:30px;
+	margin:25px 0px 48px 0;
+	position:relative;
+}
+.about-a h2:after{
+	width:100%;
+	height:7px;
+	background:#d3d3d3;
+	content:'';
+	border-radius:8px;
+	position:absolute;
+	bottom:-15px;
+	left:0;
+}
+.about-a ul{
+	height:230px;
+	border-radius:8px;
+}
+.about-a ul>li{
+	font-size:25px;
+	color:#000;
+	padding-top:34px;
+	padding-left:18px;
+}
+.about-a ul>p{
+	font-size:20px;
+	color:#666;
+	padding-top:15px;
+	padding-left:18px;
+	text-indent: 50px;
+	line-height:50px;
+}
+.information,.hobby,.resume{
+	// border:1px solid #d4d4d4;
+	border-bottom:2px solid #d4d4d4;
+	height:200px;
+	border-radius:8px;
+	margin-top: 33px;
+}
+.information ul>li:nth-of-type(1),.hobby ul>li:nth-of-type(1),.resume ul>li:nth-of-type(1){
+	margin-bottom:15px;
+	padding-top:25px;
+	padding-left:18px;
+	color:#000;
+	font-size:25px;
+	text-indent:0px;
+}
+.information ul>li,.hobby ul>li,.resume ul>li{
+	font-size:20px;
+	padding-left:18px;
+	color:#666;
+	padding-right:20px;
+	text-indent:30px;
+	line-height:35px;
+}
+.kuang{
+	display:inline-block;
+	width:95px;
+}
+.hobby{
+	height:270px;
+}
+.hobby ul>li{
+	line-height:45px;
+}
+.resume{
+	height:385px;
+}
+.resume ul>li{
+	line-height:50px;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 750px) {
+	.about-a h2{
+		font-size:25px;
+		margin:25px 0px 35px 0;
+		position:relative;
+	}
+	.about-a ul{
+		height:240px;
+	}
+	.about-a ul>p{
+		font-size:13px;
+		padding:0px 10px; 
+		text-indent: 30px;
+		line-height:30px;
+	}
+	.about-a ul>li{
+		font-size:20px;
+		padding-top:20px;
+		margin-bottom:10px;
+	}
+	.information,.hobby,.resume{
+		margin-top:0;
+		height:170px;
+	}
+	.information ul>li,.hobby ul>li,.resume ul>li{
+		font-size:13px;
+		text-indent:20px;
+		line-height:30px;
+	}
+	.hobby{
+		height:210px;
+	}
+	.resume{
+		height:340px;
+	}
+	.information ul>li:nth-of-type(1),.hobby ul>li:nth-of-type(1),.resume ul>li:nth-of-type(1){
+		font-size:20px;
+		text-indent:0px;
+	}
+	.bottom{
+		margin-bottom: 40px;
+		display:none;
+	}
+
+}
