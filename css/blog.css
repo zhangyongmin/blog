@@ -1,5 +1,5 @@
 // .navigation_a>li:nth-of-type(1) a{
-// 	color:red;
+// 	background:red;
 // }
 .navigation_a>li:nth-of-type(1) a:after{
 	content:'';
@@ -363,5 +363,4 @@
 		font-size:15px;
 		padding:0 40px;
 	}
-
 }
