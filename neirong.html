@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>aa</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	html,body,h2{margin:0;padding: 0;}
+		p{
+			display: inline-block;
+			width: 100%;
+			text-align:center;
+		}
+	/*html,body{width: 100%;}*/
+		h2{
+			display: inline-block;
+			padding:40px 0;
+			width: 100%;
+			text-align:center;
+			}
+		span{
+			display: inline-block;
+			padding: 0 10%;
+		}
+	}
+	
+	</style>
+	<script src="js/jquery-1.11.1.js"></script>
+</head>
+<body>
+<div>
+	<h2></h2>
+	<p></p>
+	<span></span>
+</div>
+</body>
+
+
+<script type="text/javascript">
+$(function(){
+	function getParam(id,_url){
+			 var url =_url||window.document.location.href;
+			 var url=url.toString();
+			 var u = url.split("?");
+			 var get = {};
+				 if (typeof(u[1]) == "string") {
+				   u = u[1].split("&");
+				   for (var i in u) {
+				     var j = u[i].split("=");
+				     get[j[0]] = j[1];
+				      
+				   }
+					 } else {
+					   return;
+					 }
+					 return get[id];
+		}
+			var tid = getParam('tid');
+				if (!tid) {
+					tid=1
+				}
+
+
+	$.ajax({
+			url:'http://jsonp.smallfox.cc/module/article/article.php',
+			type:'get',
+			data:{
+				pt:'jsonp',
+				ajax:'yes',
+				tid:getParam('tid')||1,
+				aid:getParam('aid')||1,
+			},
+			callback:'callback',
+			dataType:'jsonp',
+			success:function(data){
+				if(data.code==200){
+
+				}
+				 
+					console.log(data.data.wname)
+				$('h2').html(data.data.wname);
+				$('span').html(data.data.wjianjie);
+				$('p').html('作者：'+ data.data.wzuozhe);
+				$('span').html(data.data.wjianjie);
+				// $('#wname').html(data.data.wname);
+				// $('#wzuozhe').html(data.data.wzuozhe);
+				// $('#wjianjie').html(data.data.wjianjie);
+				// $('#wname').html(data.data.wname);
+				
+			}
+		})
+})
+	
+</script>
+</html>
