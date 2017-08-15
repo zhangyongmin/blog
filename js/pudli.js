@@ -63,19 +63,49 @@ function pudlic(){
 			}
 		}
 	}
- // var mySwiper = new Swiper ('.show-zs', {
-	//   onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
-	//     swiperAnimateCache(swiper); //隐藏动画元素 
-	//     swiperAnimate(swiper); //初始化完成开始动画
-	//   }, 
-	//   loop: true,
-	//   autoplay : 3000,
-	//   speed:1000,
-	//   autoplayDisableOnInteraction : false,
-	//   onSlideChangeEnd: function(swiper){ 
-	//     swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
-	//   } 
- //  }) 
+	function getParam(id,_url){
+		 var url =_url||window.document.location.href;
+		 var url=url.toString();
+		 var u = url.split("?");
+		 var get = {};
+			 if (typeof(u[1]) == "string") {
+			   u = u[1].split("&");
+			   for (var i in u) {
+			     var j = u[i].split("=");
+			     get[j[0]] = j[1];
+			      
+			   }
+				 } else {
+				   return;
+				 }
+				 return get[id];
+	}
+		var tid = getParam('tid');
+			if (!tid) {
+				tid=1
+			}
 
-
+			//内容标题简介
+	$.ajax({
+		url:'http://jsonp.smallfox.cc/module/article/type.php',
+		type:'get',
+		data:{
+			pt:'jsonp',
+			ajax:'yes',
+			tid:4,
+			page:1,
+		},
+		callback:'callback',
+		dataType:'jsonp',
+		success:function(data){
+			var paihang =$('.home ul>li>a').length;
+			for (var i = 0; i < paihang; i++) {
+			$('.home ul>li>a').eq(i).append("<a href='neirong.html?aid="+data.data[i].j_cid+'&tid='+data.data[i].j_tid+"'>"+data.data[i].j_name+"</a>");
+			}
+		}
+	})
 }
+			
+
+		
+

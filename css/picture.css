@@ -1,15 +1,15 @@
-// .navigation_a>li:nth-of-type(4) a{
-// 	color:red;
-// }
-.navigation_a>li:nth-of-type(4) a:after{
-	content:'';
-	height:3px;
-	width:100%;
-	left:calc(50% - 47px);
-	background:red;
-	display:inline-block;
-	top:48px;
-	position:absolute;
+
+.navigation_a>li:nth-of-type(4){
+	border-bottom:2px solid red;	
+}
+.navigation_a>li:hover{
+	border-bottom:2px solid red;	
+}
+.navigation_a>li:nth-of-type(4) a{
+	color:red;
+}
+.navigation_a>li>a:hover{
+	color:red;
 }
 .kuang{
 	top:40px;
@@ -43,13 +43,30 @@
 	background:url(../img/frame.png)no-repeat center;
 	z-index: 1;
 	opacity: 0.7;
+	position:relative;
 }
 .wrap_tu span{
 	display: inline-block;
 	height:300px;
 	width: 100%;
 	margin-top:30px;
+	line-height: 500px;
+	text-align:center;
 	box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+}
+.wrap_tu span>i{
+	display:inline-block;
+	width:175px;
+	height:230px;
+	background:red;
+	background-size:cover;
+	overflow:hidden;
+	box-shadow: 0 0 10px #666 inset; 
+}
+.wrap_tu span>i>img{
+	width:100%;
+	hieght100%;
+	margin-top:-273px;
 }
 .wrap_tu span:hover{
 	transition: 0.5s;

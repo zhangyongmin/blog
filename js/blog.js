@@ -22,11 +22,11 @@ $(function(){
     })
 //.works-nz网页制作
     var mySwiper2 = new Swiper ('.works-nz', {
-    // direction: 'vertical',
+    direction: 'vertical',
 		loop: true,
-		autoplay : 3000,
-		speed:2000,
-		effect : 'cube',
+		autoplay : 10,
+		speed:15000,
+		// effect : 'cube',
 		autoplayDisableOnInteraction : false,
     }) 
 //  //图片欣赏

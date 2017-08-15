@@ -1,15 +1,14 @@
-// .navigation_a>li:nth-of-type(2) a{
-// 	color:red;
-// }
-.navigation_a>li:nth-of-type(2) a:after{
-	content:'';
-	height:3px;
-	width:100%;
-	left:calc(50% - 40px);
-	background:red;
-	display:inline-block;
-	top:48px;
-	position:absolute;
+.navigation_a>li:nth-of-type(2){
+	border-bottom:2px solid red;	
+}
+.navigation_a>li:hover{
+	border-bottom:2px solid red;	
+}
+.navigation_a>li:nth-of-type(2) a{
+	color:red;
+}
+.navigation_a>li>a:hover{
+	color:red;
 }
 .about-a{
 	height:345px;

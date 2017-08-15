@@ -1,22 +1,22 @@
 
 function vuezu(){
 // class="col-lg-3 col-md-3 col-sm-3 col-xs-12 text-qp-tu"
+// class="col-lg-9 col-md-9 col-sm-9 col-xs-12 text-qp-wb"
 Vue.component("theArticle",{
 				data:function(){
 					return{
 						selectShow:false
-					};
+					}
 				},
-				props:["biaoti","but","jianhtu",'youlan','ul'],
+				props:["biaoti","but","jianhtu",'youlan','ul','ula'],
 				template:`
 					<div class="text-qp shadow">
 						<ul v-bind:class="ul">
 							<li v-bind:class="jianhtu"></li>	
 						</ul>
-						<ul class="col-lg-9 col-md-9 col-sm-9 col-xs-12 text-qp-wb">
+						<ul v-bind:class="ula">
 							<li v-bind:class='biaoti'>标题</li>
-							<span v-bind:class="youlan">
-								
+							<span v-bind:class="youlan">	
 							</span>
 							<dl v-bind:class="but"></dl> 
 							<ul class="author col-lg-12 col-md-12 col-sm-12 col-xs-12">

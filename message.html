@@ -17,19 +17,19 @@
 <!-- 	<script src="swiper/jquery-1.10.1.min.js"></script> -->
 <!-- 	<script src="swiper/swiper-3.4.2.jquery.min (1).js"></script> -->
 	<style type="text/css">
-	.navigation_a>li:nth-of-type(6) a{
-		color:red;
-	}
-	.navigation_a>li:nth-of-type(6) a:after{
-		content:'';
-		height:3px;
-		width:100%;
-		left:calc(50% - 47px);
-		background:red;
-		display:inline-block;
-		top:48px;
-		position:absolute;
-	}
+	
+		.navigation_a>li:nth-of-type(6){
+			border-bottom:2px solid red;	
+		}
+		.navigation_a>li:hover{
+			border-bottom:2px solid red;	
+		}
+		.navigation_a>li:nth-of-type(6) a{
+			color:red;
+		}
+		.navigation_a>li>a:hover{
+			color:red;
+		}
 	</style>
 </head>
 <body>
@@ -50,9 +50,9 @@
 				<ul class=" nav navbar-nav  navbar-right navigation_a">
 					<li class="left"><a href="blog.html">首页</a></li>
 					<li><a href="about.html">关于我</a></li>
-					<li><a href="template.html">模板推荐</a></li>
+					<li><a href="template.html">人生感悟</a></li>
 					<li><a href="picture.html">美图欣赏</a></li>
-					<li><a href="learn.html">学无止境</a></li>
+					<li><a href="learn.html">爱情美文</a></li>
 					<li><a href="message.html">给我留言</a></li>
 				</ul>
 			</div>
@@ -74,13 +74,6 @@
 		<img src="img/bj-life.jpg">
 	</div>
 	<div id="SOHUCS" sid="请将此处替换为配置SourceID的语句" ></div> 
-	<script type="text/javascript"> 
-	(function(){ 
-	var appid = 'cyt9tsnfj'; 
-	var conf = 'prod_8be5a17a671d1e77b580bd2e210bbffc'; 
-	var width = window.innerWidth || document.documentElement.clientWidth; 
-	if (width < 960) { 
-	window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
 	<div id="uyan_frame"></div>
 	<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js"></script>
 	<!-- UY END -->
